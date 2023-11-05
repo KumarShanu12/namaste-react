@@ -1,5 +1,6 @@
 
 import { CON_URL } from "./utilities/constants";
+import { Link } from "react-router-dom";
 const RestaurantCard = (props) => {
     const { resData } = props;
   
@@ -24,7 +25,9 @@ const RestaurantCard = (props) => {
           <h4>{avgRating}</h4>
           <h4>Delivery Time{deliveryTime}</h4>
           <h4>{costForTwo}</h4>
+          
         </div>
+
       </div>
     );
   };
