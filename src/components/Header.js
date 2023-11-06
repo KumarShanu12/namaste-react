@@ -8,24 +8,24 @@ const Header = () => {
   const status = useOnlineStatus()
   console.log(status)
     return (
-      <div className="header">
-        <div className="logo-container">
+      <div className="flex justify-between	p-4 shadow-lg bg-pink-50">
+        <div className="">
           <img
-            className="logo"
-            src={LOGO_URL}
+            className="w-24"
+             src={LOGO_URL}
             alt="logo-food"
           />
         </div>
   
-        <div className="nav-items">
-          <ul>
-          <li>Status {status ?  '✅'  : '❎' }</li>
-          <li><Link to="/grocery">Grocery</Link></li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link> </li>
-            <li ><Link to="/contact">Contact Us</Link></li>
-            <li>Cart</li>
-            <button  onClick={()=>btnName=='Login' ? setBtnName('Logout') : setBtnName('Login')} style={{padding: "1rem"}}>{btnName}</button>
+        <div className="">
+          <ul className="flex justify-between">
+          <li className="m-4">Status {status ?  '✅'  : '❎' }</li>
+          <li className="m-4"><Link to="/grocery">Grocery</Link></li>
+            <li className="m-4"><Link to="/">Home</Link></li>
+            <li className="m-4"><Link to="/about">About Us</Link> </li>
+            <li className="m-4" ><Link to="/contact">Contact Us</Link></li>
+            <li className="m-4">Cart</li>
+            <button className="mx-4" onClick={()=>btnName=='Login' ? setBtnName('Logout') : setBtnName('Login')} style={{padding: "1rem"}}>{btnName}</button>
           </ul>
         </div>
       </div>

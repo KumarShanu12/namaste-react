@@ -36,13 +36,13 @@ const RestaurantMenu = () => {
     // console.log('resInfo',itemCards)
 
   return (
-    <div>
-      <h1>{name}</h1>
+    <div className="w-1/2 flex flex-col items-center   border-gray-300  m-auto">
+     <div className="w-full p-12  border-b-2 border-dashed  font-black"><h1>{name}</h1></div> 
+      <div className="p-4 w-full font-medium flex justify-start"><p>{costForTwoMessage}</p></div> 
       {cuisines?.map((val,i) => (
-        <h2 key={i}>{val}</h2>
+        <div className="p-4 flex justify-start"><h2  key={i}>{val}</h2></div> 
       ))}
-      <p>{costForTwoMessage}</p>
-      {itemCards?.map((val,ind) => <p key={ind} style={{margin:"1rem",padding:"0.6rem" , border: "1px solid" , textAlign:'center'}}>{val?.card?.info?.name}</p> )}     
+      {itemCards?.map((val,ind) => <p key={ind}  >{val?.card?.info?.name}</p> )}     
       </div>
   );
 };

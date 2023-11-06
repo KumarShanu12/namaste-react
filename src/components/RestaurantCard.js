@@ -9,10 +9,10 @@ const RestaurantCard = (props) => {
     const { deliveryTime } = resData?.info?.sla;
     // console.log(resData?.restaurants[0].info.name)
     return (
-      <div className="res-card">
-        <div className="res-image-container">
+      <div className="m-4 rounded-lg border-2 p-4 w-34  ">
+        <div className="">
           <img
-            className="res-logo"
+            className="w-24"
             src={
               CON_URL +
               cloudinaryImageId
@@ -21,11 +21,10 @@ const RestaurantCard = (props) => {
         </div>
         <div className="res-details">
           <h3>{name}</h3>
-          <h4 className="cuisines">{cuisines?.map((val) => val.concat(","))}</h4>
+          {cuisines?.map((val) =>  <h1 className="break-words"> {val.concat(",") }</h1>)} 
           <h4>{avgRating}</h4>
           <h4>Delivery Time{deliveryTime}</h4>
-          <h4>{costForTwo}</h4>
-          
+          <h4>{costForTwo}</h4> 
         </div>
 
       </div>
